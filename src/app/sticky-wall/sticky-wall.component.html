@@ -1,0 +1,26 @@
+<div class="panel panel-default sticky-wall">
+  <div class="panel-heading">{{title}}
+    <span class="glyphicon glyphicon-plus pull-right" aria-hidden="true" (click)="addstick=true;"></span>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-12">
+        <input type="text" class="form-control" 
+        (keyup.Enter)="addnote(stickyvalues)" 
+        #stickyvalues 
+          type="text" 
+          autofocus />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-4" *ngFor="let item of stickyList | reverse; let i = index;">
+        <sticky-note
+        sticky-id="{{item.id}}"
+        sticky-text="{{item.text}}"
+        sticky-theme="{{stickytheme}}" 
+        (change)="deleteNote(i)"
+        (click)="update(i)"></sticky-note>
+      </div>
+    </div>
+  </div>
+</div>

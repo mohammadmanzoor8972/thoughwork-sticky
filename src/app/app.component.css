@@ -1,0 +1,15 @@
+.sticky-note-item{
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px 0px 32px;
+    box-shadow: -1px 4px 7px 0px #b3b3b3;
+    background-color: #fbd96e;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.title{
+    text-align: center;
+}

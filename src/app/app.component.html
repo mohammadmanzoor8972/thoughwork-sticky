@@ -1,0 +1,14 @@
+<h3 class="title">
+ Retrospective
+</h3>
+<input type="button" class="btn btn-danger" value="sync" (click)="sync()" />
+<div class="row">
+    <div class="col-xs-12 col-md-6" *ngFor="let obj of walls">
+        <app-sticky-wall 
+        sticky-title="{{obj.title}}" 
+        sticky-theme="{{obj.theme}}"
+        sticky-wallId="{{obj.wallId}}"
+        [sticky-data]="obj.data"
+        > </app-sticky-wall>
+    </div>
+  </div>
